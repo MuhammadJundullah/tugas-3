@@ -1,0 +1,48 @@
+{
+    "version": 2,
+    "regions": ["fra1"],
+    "functions": {
+        "api/index.php": {
+            "runtime": "vercel-php@0.7.1"
+        }
+    },
+    "routes": [
+        {
+            "src": "/build/(.*)",
+            "dest": "/build/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        }
+    ],
+    "outputDirectory": "public",
+
+    "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "true",
+        "APP_URL": "https://tugas-2.vercel.app",
+
+        "APP_CONFIG_CACHE": "/tmp/config.php",
+        "APP_EVENTS_CACHE": "/tmp/events.php",
+        "APP_PACKAGES_CACHE": "/tmp/packages.php",
+        "APP_ROUTES_CACHE": "/tmp/routes.php",
+        "APP_SERVICES_CACHE": "/tmp/services.php",
+        "VIEW_COMPILED_PATH": "/tmp",
+
+        "CACHE_DRIVER": "array",
+        "LOG_CHANNEL": "stderr",
+        "SESSION_DRIVER": "cookie",
+
+        "DB_CONNECTION": "mysql",
+        "DB_HOST": "viaduct.proxy.rlwy.net",
+        "DB_PORT": "42096",
+        "DB_DATABASE": "karyawan",
+        "DB_USERNAME": "root",
+        "DB_PASSWORD": "VWrywVOIikPOjzsVqGrdRCFAxjYCSjRc",
+
+        "APP_NAME": "Laravel",
+        "APP_KEY": "base64:mFShDn9JnFcNJzs4yQauuuP2fzTcFxPtiH5LOVT6sW4=",
+        "APP_TIMEZONE": "UTC"
+    }
+}
